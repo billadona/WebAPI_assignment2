@@ -1,0 +1,35 @@
+{
+	"id": "4faa4fa8-da84-a106-50b2-f8c4726b6465",
+	"name": "Assignment2",
+	"description": "",
+	"order": [
+		"efa76f5e-7eb7-69aa-b44d-e9be553e5a89"
+	],
+	"folders": [],
+	"timestamp": 1457152480881,
+	"owner": "303547",
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "efa76f5e-7eb7-69aa-b44d-e9be553e5a89",
+			"headers": "",
+			"url": "http://localhost:8080/hello",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "PUT",
+			"collectionId": "4faa4fa8-da84-a106-50b2-f8c4726b6465",
+			"data": [],
+			"dataMode": "params",
+			"name": "http://localhost:8080/hello",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1457152528527,
+			"version": 2,
+			"responses": [],
+			"tests": "var jsonData = JSON.parse(responseBody);                    // parse the response\r\nvar title = jsonData.items[0].volumeInfo.title;             // title will contain title of the book\r\nconsole.log(\"title \" + title);                              // output the title to the console window\r\nvar patt = /turing/i;                                       // will be used to test the titles from the JSON data\r\nvar res = patt.test(title);                                 // test if the title stored is equal to var patt\r\nconsole.log(res);                                           // output a boolean that tells if its true or not\r\ntests[\"book title1\"] = res === true;                        // tests if res is equal to the value\r\ntests[\"book title\"] = responseBody.has(\"turing\");           // test if response body has the word \"turing\"\r\ntests[\"total items\"] = jsonData.totalItems > 1              // test if theres more than 1 book that has the same title\r\ntests[\"Status code is 200\"] = responseCode.code === 200;    // test if the status is 200 ",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
